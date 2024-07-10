@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: demoapi
+  name: TradeProjectService
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demoapi
+      app: TradeProjectService
   template:
     metadata:
       labels:
-        app: demoapi
+        app: TradeProjectService
     spec:
       containers:
-        - name: demoapi
-          image: mainstxcr.azurecr.io/demoapi
+        - name: TradeProjectService
+          image: mainstxcr.azurecr.io/TradeProjectService
           ports:
           - containerPort: 80
